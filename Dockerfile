@@ -26,11 +26,8 @@ ENV POETRY_VIRTUALENVS_IN_PROJECT=1
 
 RUN curl -sSL https://install.python-poetry.org | python - --version 1.8.2
 
-# RUN pip install --upgrade --no-cache-dir pip \
-#     && pip install --no-cache-dir poetry \
-#     && poetry install
+RUN pip install --upgrade --no-cache-dir pip \
+    && pip install --no-cache-dir poetry \
+    && poetry install
 
 
-RUN pip install --upgrade --no-cache-dir pip
-RUN pip install --no-cache-dir poetry
-RUN poetry install
