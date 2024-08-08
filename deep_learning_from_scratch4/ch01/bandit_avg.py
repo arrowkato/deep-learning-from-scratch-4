@@ -1,3 +1,5 @@
+import os
+
 import matplotlib
 
 matplotlib.use("Agg")
@@ -32,4 +34,5 @@ plt.ylabel("Rates")
 plt.xlabel("Steps")
 plt.plot(avg_rates)
 # plt.show()
-plt.savefig("output.png")
+current_file_directory = os.path.dirname(os.path.abspath(__file__))
+plt.savefig(f"{current_file_directory}/bandit_avg.png")
