@@ -1,7 +1,8 @@
-import os; import sys; sys.path.append(os.path.join(os.path.dirname(__file__), '..'))  # for importing the parent dirs
 from collections import defaultdict
+
 import numpy as np
-from common.gridworld import GridWorld
+
+from deep_learning_from_scratch4.common.gridworld import GridWorld
 
 
 class QLearningAgent:
