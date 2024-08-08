@@ -1,6 +1,9 @@
-import numpy as np
+import os
+
 import matplotlib.pyplot as plt
-from bandit import Agent
+import numpy as np
+
+from deep_learning_from_scratch4.ch01.bandit import Agent
 
 
 class NonStatBandit:
@@ -71,4 +74,6 @@ plt.xlabel("Steps")
 for key, avg_rates in results.items():
     plt.plot(avg_rates, label=key)
 plt.legend()
-plt.show()
+# plt.show()
+current_file_directory = os.path.dirname(os.path.abspath(__file__))
+plt.savefig(f"{current_file_directory}/bandit_01.png")

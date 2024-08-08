@@ -1,5 +1,7 @@
-import numpy as np
+import os
+
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 class Bandit:
@@ -54,9 +56,12 @@ if __name__ == "__main__":
     plt.ylabel("Total reward")
     plt.xlabel("Steps")
     plt.plot(total_rewards)
-    plt.show()
+    # plt.show()
+    current_file_directory = os.path.dirname(os.path.abspath(__file__))
+    plt.savefig(f"{current_file_directory}/bandit_01.png")
 
     plt.ylabel("Rates")
     plt.xlabel("Steps")
     plt.plot(rates)
-    plt.show()
+    # plt.show()
+    plt.savefig(f"{current_file_directory}/bandit_02.png")
