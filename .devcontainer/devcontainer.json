@@ -1,0 +1,45 @@
+{
+    "dockerComposeFile": [
+        // このファイルから見たときの相対パス
+        "../docker-compose.yml"
+    ],
+    "service": "app", // これは、docker-compose.yml のサービス名と一致させてください。
+    "workspaceFolder": "/app",
+    // Features to add to the dev container. More info: https://containers.dev/features.
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": true,
+            "configureZshAsDefaultShell": true,
+            "installOhMyZsh": true,
+            "upgradePackages": true
+        },
+        "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
+            "plugins": "ssh-agent npm zsh-syntax-highlighting zsh-autosuggestions",
+            "omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions https://github.com/zsh-users/zsh-syntax-highlighting",
+            "username": "root"
+        },
+        "ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}
+    },
+    // Dev Container 起動時に実行するスクリプト（任意）
+    "postCreateCommand": "poetry install",
+    "customizations": {
+        "extensions": [
+            "ms-python.python"
+        ],
+        "vscode": {
+            // extensionは趣味なのでお好みでどうぞ
+            "extensions": [
+                "ms-azuretools.vscode-docker",
+                "mgesbert.python-path",
+                "ms-python.python",
+                "tamasfe.even-better-toml",
+                "njpwerner.autodocstring",
+                "littlefoxteam.vscode-python-test-adapter",
+                "shardulm94.trailing-spaces",
+                "GitHub.copilot",
+                "ms-python.debugpy",
+                "charliermarsh.ruff"
+            ]
+        }
+    }
+}
