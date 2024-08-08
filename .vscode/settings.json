@@ -1,0 +1,15 @@
+{
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            //ファイル保存時に自動で指摘箇所を修正する(
+            "source.fixAll": "explicit",
+            // isortのようにimportの整列
+            "source.organizeImports": "explicit",
+            // 他のLinterではなく、Ruff利用を明示
+            "source.fixAll.ruff": "explicit",
+            "source.organizeImports.ruff": "explicit",
+        },
+        "editor.defaultFormatter": "charliermarsh.ruff",
+    },
+}
