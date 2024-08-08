@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: deep_learning_from_scratch_4
+    # image: python:3.12.5-slim-bookworm # ここを修正
+    volumes:
+      - type: bind
+        source: .
+        target: /app
+    tty: true
+    stdin_open: true
