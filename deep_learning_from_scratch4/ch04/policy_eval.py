@@ -1,9 +1,6 @@
-if '__file__' in globals():
-    import os
-    import sys
-    sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from collections import defaultdict
-from common.gridworld import GridWorld
+
+from deep_learning_from_scratch4.common.gridworld import GridWorld
 
 
 def eval_onestep(pi, V, env, gamma=0.9):
@@ -38,7 +35,7 @@ def policy_eval(pi, V, env, gamma, threshold=0.001):
     return V
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     env = GridWorld()
     gamma = 0.9
 
@@ -47,4 +44,3 @@ if __name__ == '__main__':
 
     V = policy_eval(pi, V, env, gamma)
     env.render_v(V, pi)
-

@@ -1,10 +1,7 @@
-if '__file__' in globals():
-    import os
-    import sys
-    sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from collections import defaultdict
-from common.gridworld import GridWorld
-from ch04.policy_eval import policy_eval
+
+from deep_learning_from_scratch4.ch04.policy_eval import policy_eval
+from deep_learning_from_scratch4.common.gridworld import GridWorld
 
 
 def argmax(d):
@@ -54,7 +51,7 @@ def policy_iter(env, gamma, threshold=0.001, is_render=True):
     return pi
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     env = GridWorld()
     gamma = 0.9
     pi = policy_iter(env, gamma)
