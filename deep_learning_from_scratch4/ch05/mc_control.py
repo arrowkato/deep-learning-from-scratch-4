@@ -1,4 +1,4 @@
-import os, sys; sys.path.append(os.path.join(os.path.dirname(__file__), '..')) # for importing the parent dirs
+import os; import sys; sys.path.append(os.path.join(os.path.dirname(__file__), '..')) # for importing the parent dirs
 import numpy as np
 from collections import defaultdict
 from common.gridworld import GridWorld

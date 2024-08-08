@@ -30,7 +30,7 @@ class Agent:
         return np.argmax(self.Qs)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     steps = 1000
     epsilon = 0.1
 
@@ -51,12 +51,12 @@ if __name__ == '__main__':
 
     print(total_reward)
 
-    plt.ylabel('Total reward')
-    plt.xlabel('Steps')
+    plt.ylabel("Total reward")
+    plt.xlabel("Steps")
     plt.plot(total_rewards)
     plt.show()
 
-    plt.ylabel('Rates')
-    plt.xlabel('Steps')
+    plt.ylabel("Rates")
+    plt.xlabel("Steps")
     plt.plot(rates)
     plt.show()

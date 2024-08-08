@@ -10,7 +10,7 @@ for n in range(1, 11):
     Q = sum(rewards) / n
     print(Q)
 
-print('---')
+print("---")
 
 # incremental implementation
 np.random.seed(0)
