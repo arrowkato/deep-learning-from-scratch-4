@@ -1,0 +1,69 @@
+[tool.poetry]
+name = "deep_learning_from_scratch4"
+version = "0.1.0"
+description = "reinforcement learning"
+authors = ["John Doe"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "deep_learning_from_scratch4" }]
+
+[tool.poetry.dependencies]
+python = ">=3.12,<4"
+
+numpy = ">=2.0"
+matplotlib = ">=3.4"
+
+[tool.poetry.dev-dependencies]
+ruff = ">=0.5.7"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.ruff]
+# ruff setting document: https://docs.astral.sh/ruff/
+line-length = 120
+target-version = "py312"
+
+exclude = [
+    # default setting: https://docs.astral.sh/ruff/configuration/
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+    # add my own setiting
+    ".devcontainer",
+    "__pycache__",
+]
+
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+ignore = ["E402", "E501"]
+
+
+[tool.ruff.format]
+quote-style = "double"
