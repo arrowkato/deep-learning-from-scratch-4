@@ -1,7 +1,10 @@
-import numpy as np
-import matplotlib.pyplot as plt
-from bandit import Bandit, Agent
+import matplotlib
 
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import numpy as np
+
+from deep_learning_from_scratch4.ch01.bandit import Agent, Bandit
 
 runs = 200
 steps = 1000
@@ -25,7 +28,8 @@ for run in range(runs):
 
 avg_rates = np.average(all_rates, axis=0)
 
-plt.ylabel('Rates')
-plt.xlabel('Steps')
+plt.ylabel("Rates")
+plt.xlabel("Steps")
 plt.plot(avg_rates)
-plt.show()
+# plt.show()
+plt.savefig("output.png")
