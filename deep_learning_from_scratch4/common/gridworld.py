@@ -12,11 +12,7 @@ class GridWorld:
             3: "RIGHT",
         }
 
-        self.reward_map = np.array(
-            [[0, 0, 0, 1.0],
-             [0, None, 0, -1.0],
-             [0, 0, 0, 0]]
-        )
+        self.reward_map = np.array([[0, 0, 0, 1.0], [0, None, 0, -1.0], [0, 0, 0, 0]])
         self.goal_state = (0, 3)
         self.wall_state = (1, 1)
         self.start_state = (2, 0)
@@ -66,17 +62,15 @@ class GridWorld:
         state = self.agent_state
         next_state = self.next_state(state, action)
         reward = self.reward(state, action, next_state)
-        done = (next_state == self.goal_state)
+        done = next_state == self.goal_state
 
         self.agent_state = next_state
         return next_state, reward, done
 
     def render_v(self, v=None, policy=None, print_value=True):
-        renderer = render_helper.Renderer(self.reward_map, self.goal_state,
-                                          self.wall_state)
+        renderer = render_helper.Renderer(self.reward_map, self.goal_state, self.wall_state)
         renderer.render_v(v, policy, print_value)
 
     def render_q(self, q=None, print_value=True):
-        renderer = render_helper.Renderer(self.reward_map, self.goal_state,
-                                          self.wall_state)
+        renderer = render_helper.Renderer(self.reward_map, self.goal_state, self.wall_state)
         renderer.render_q(q, print_value)

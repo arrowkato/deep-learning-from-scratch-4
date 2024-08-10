@@ -1,4 +1,7 @@
-import os; import sys; sys.path.append(os.path.join(os.path.dirname(__file__), '..'))  # for importing the parent dirs
+import os
+import sys
+
+sys.path.append(os.path.join(os.path.dirname(__file__), ".."))  # for importing the parent dirs
 import matplotlib.pyplot as plt
 import numpy as np
 from dezero import Model
@@ -93,8 +96,8 @@ for episode in range(episodes):
     loss_history.append(average_loss)
 
 
-plt.xlabel('episode')
-plt.ylabel('loss')
+plt.xlabel("episode")
+plt.ylabel("loss")
 plt.plot(range(len(loss_history)), loss_history)
 plt.show()
 

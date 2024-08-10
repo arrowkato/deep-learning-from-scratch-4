@@ -47,7 +47,7 @@ class Agent:
             G = reward + self.gamma * G
 
         for reward, prob in self.memory:
-            loss += - torch.log(prob) * G
+            loss += -torch.log(prob) * G
 
         self.optimizer.zero_grad()
         loss.backward()
@@ -55,7 +55,7 @@ class Agent:
         self.memory = []
 
 
-env = gym.make('CartPole-v0')
+env = gym.make("CartPole-v0")
 agent = Agent()
 reward_history = []
 

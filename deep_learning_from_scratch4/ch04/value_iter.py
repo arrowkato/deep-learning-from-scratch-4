@@ -1,7 +1,8 @@
-if '__file__' in globals():
+if "__file__" in globals():
     import os
     import sys
-    sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+
+    sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 from collections import defaultdict
 from common.gridworld import GridWorld
 from ch04.policy_iter import greedy_policy
@@ -43,7 +44,7 @@ def value_iter(V, env, gamma, threshold=0.001, is_render=True):
     return V
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     V = defaultdict(lambda: 0)
     env = GridWorld()
     gamma = 0.9

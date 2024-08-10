@@ -13,6 +13,7 @@ y = np.sin(2 * np.pi * x) + np.random.rand(100, 1)
 lr = 0.2
 iters = 10000
 
+
 class TwoLayerNet(Model):
     def __init__(self, hidden_size, out_size):
         super().__init__()
@@ -23,6 +24,7 @@ class TwoLayerNet(Model):
         y = F.sigmoid(self.l1(x))
         y = self.l2(y)
         return y
+
 
 model = TwoLayerNet(10, 1)
 optimizer = optimizers.SGD(lr)
@@ -41,9 +43,9 @@ for i in range(iters):
 
 # Plot
 plt.scatter(x, y, s=10)
-plt.xlabel('x')
-plt.ylabel('y')
-t = np.arange(0, 1, .01)[:, np.newaxis]
+plt.xlabel("x")
+plt.ylabel("y")
+t = np.arange(0, 1, 0.01)[:, np.newaxis]
 y_pred = model(t)
-plt.plot(t, y_pred.data, color='r')
+plt.plot(t, y_pred.data, color="r")
 plt.show()

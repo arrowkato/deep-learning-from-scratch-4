@@ -93,9 +93,10 @@ class DQNAgent:
     def sync_qnet(self):
         self.qnet_target = copy.deepcopy(self.qnet)
 
+
 episodes = 300
 sync_interval = 20
-env = gym.make('CartPole-v0')
+env = gym.make("CartPole-v0")
 agent = DQNAgent()
 reward_history = []
 
@@ -121,8 +122,8 @@ for episode in range(episodes):
 
 
 # === Plot ===
-plt.xlabel('Episode')
-plt.ylabel('Total Reward')
+plt.xlabel("Episode")
+plt.ylabel("Total Reward")
 plt.plot(range(len(reward_history)), reward_history)
 plt.show()
 
@@ -139,4 +140,4 @@ while not done:
     state = next_state
     total_reward += reward
     env.render()
-print('Total Reward:', total_reward)
+print("Total Reward:", total_reward)
