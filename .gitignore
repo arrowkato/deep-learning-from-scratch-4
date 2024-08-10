@@ -141,3 +141,6 @@ dmypy.json
 
 # vscode
 !.vscode/*.json
+
+# ruff
+.ruff_cache/*
