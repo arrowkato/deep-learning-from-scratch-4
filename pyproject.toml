@@ -12,6 +12,35 @@ python = ">=3.12,<4"
 
 numpy = ">=2.0"
 matplotlib = ">=3.4"
+gym = "^0.26.2"
+# 筆者koki0702氏謹製のライブラリ。
+# ゼロから作るDeep Learning 3 を読んでいないなら、素直にPyTorchで良さそう
+dezero = "^0.0.13"
+
+torch = { url = "https://download.pytorch.org/whl/cpu/torch-2.4.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl" }
+torchvision = { url = "https://download.pytorch.org/whl/cpu/torchvision-0.19.0-cp312-cp312-linux_aarch64.whl" }
+torchaudio = { url = "https://download.pytorch.org/whl/cpu/torchaudio-2.4.0-cp312-cp312-linux_aarch64.whl" }
+
+# $ uname -m
+# aarch64
+# かつpython3.12 を使っている 安定版のダウンロードなら
+# https://pytorch.org/get-started/locally/ より
+# pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+# で行けるとのこと。
+#
+# $ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+# Looking in indexes: https://download.pytorch.org/whl/cpu
+# Collecting torch
+#   Downloading https://download.pytorch.org/whl/cpu/torch-2.4.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (89.7 MB)
+#      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 89.7/89.7 MB 25.4 MB/s eta 0:00:00
+# Collecting torchvision
+#   Downloading https://download.pytorch.org/whl/cpu/torchvision-0.19.0-cp312-cp312-linux_aarch64.whl (14.1 MB)
+#      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.1/14.1 MB 30.2 MB/s eta 0:00:00
+# Collecting torchaudio
+#   Downloading https://download.pytorch.org/whl/cpu/torchaudio-2.4.0-cp312-cp312-linux_aarch64.whl (1.7 MB)
+#
+# (以下略)
+# なので、上記のURLを指定すれば良さそう
 
 [tool.poetry.dev-dependencies]
 ruff = ">=0.5.7"
