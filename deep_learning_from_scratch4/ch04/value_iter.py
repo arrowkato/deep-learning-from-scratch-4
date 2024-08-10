@@ -1,11 +1,7 @@
-if "__file__" in globals():
-    import os
-    import sys
-
-    sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 from collections import defaultdict
-from common.gridworld import GridWorld
-from ch04.policy_iter import greedy_policy
+
+from deep_learning_from_scratch4.ch04.policy_iter import greedy_policy
+from deep_learning_from_scratch4.common.gridworld import GridWorld
 
 
 def value_iter_onestep(V, env, gamma):

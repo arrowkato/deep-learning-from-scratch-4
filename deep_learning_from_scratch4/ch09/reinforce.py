@@ -83,6 +83,6 @@ for episode in range(episodes):
 
 
 # plot
-from common.utils import plot_total_reward
+from deep_learning_from_scratch4.common.utils import plot_total_reward
 
 plot_total_reward(reward_history)

@@ -1,5 +1,6 @@
 import numpy as np
-import common.gridworld_render as render_helper
+
+import deep_learning_from_scratch4.common.gridworld_render as render_helper
 
 
 class GridWorld:

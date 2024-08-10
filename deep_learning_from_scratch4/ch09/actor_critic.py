@@ -1,14 +1,8 @@
-if "__file__" in globals():
-    import os
-    import sys
-
-    sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
-import numpy as np
-import gym
-from dezero import Model
-from dezero import optimizers
 import dezero.functions as F
 import dezero.layers as L
+import gym
+import numpy as np
+from dezero import Model, optimizers
 
 
 class PolicyNet(Model):
@@ -103,6 +97,6 @@ for episode in range(episodes):
 
 
 # plot
-from common.utils import plot_total_reward
+from deep_learning_from_scratch4.common.utils import plot_total_reward
 
 plot_total_reward(reward_history)

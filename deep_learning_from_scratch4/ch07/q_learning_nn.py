@@ -1,14 +1,10 @@
-import os
-import sys
-
-sys.path.append(os.path.join(os.path.dirname(__file__), ".."))  # for importing the parent dirs
-import matplotlib.pyplot as plt
-import numpy as np
-from dezero import Model
-from dezero import optimizers
 import dezero.functions as F
 import dezero.layers as L
-from common.gridworld import GridWorld
+import matplotlib.pyplot as plt
+import numpy as np
+from dezero import Model, optimizers
+
+from deep_learning_from_scratch4.common.gridworld import GridWorld
 
 
 def one_hot(state):
